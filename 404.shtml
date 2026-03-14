@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Halaman Tidak Ditemukan | Oppa Gemes</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        softBlue: '#6EC1E4',
+                        softPink: '#F6A5C0',
+                        darkText: '#1F2937',
+                    },
+                    fontFamily: {
+                        poppins: ['Poppins', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(0,0,0,0.08)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #fafafa; }
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; }
+        
+        /* Floating Animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-delay { animation: float 8s ease-in-out infinite; animation-delay: 2s; }
+
+        /* Gradient Text untuk angka 404 */
+        .text-gradient-404 {
+            background: linear-gradient(135deg, #6EC1E4, #dbb4e0, #F6A5C0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-hidden min-h-screen flex flex-col relative z-0">
+
+    <div class="absolute top-[-10%] left-[-10%] w-64 md:w-96 pointer-events-none -z-10 animate-float">
+        <img src="./public/images/element-2.svg" alt="Blob Blue" class="w-full h-auto opacity-50">
+    </div>
+    <div class="absolute bottom-[-10%] right-[-5%] w-72 md:w-[400px] pointer-events-none -z-10 animate-float-delay">
+        <img src="./public/images/element-1.svg" alt="Blob Pink" class="w-full h-auto opacity-50">
+    </div>
+
+    <main class="flex-grow flex flex-col items-center justify-center px-4 text-center relative z-10">
+        
+        <a href="index.html" class="mb-8 drop-shadow-sm hover:scale-105 transition-transform duration-300">
+            <img src="./public/images/Logo_1.PNG" alt="Oppa Gemes Logo" class="h-16 md:h-20 w-auto">
+        </a>
+
+        <div class="text-6xl md:text-8xl mb-4 animate-bounce" style="animation-duration: 3s;">
+            🍪🕵️‍♂️
+        </div>
+
+        <h1 class="text-[100px] md:text-[150px] font-black leading-none text-gradient-404 drop-shadow-sm mb-2">
+            404
+        </h1>
+
+        <h2 class="text-2xl md:text-4xl font-extrabold text-gray-800 mb-4">
+            Waduh, camilannya habis!
+        </h2>
+        <p class="text-gray-600 text-base md:text-lg max-w-lg mx-auto mb-10 leading-relaxed">
+            Sepertinya halaman yang kamu cari sudah pindah alamat atau tidak pernah ada. Tapi tenang, peluang bisnis Oppa Gemes masih selalu ada buat kamu!
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center gap-4">
+            <a href="index.html" class="w-full sm:w-auto bg-softBlue text-white px-8 py-3.5 rounded-full font-bold shadow-soft hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fas fa-home"></i> Kembali ke Beranda
+            </a>
+            <a href="https://forms.gle/PcmNk4YNUHESrpEH9" target="_blank" class="w-full sm:w-auto bg-white text-softPink border-2 border-softPink px-8 py-3.5 rounded-full font-bold shadow-sm hover:-translate-y-1 hover:bg-softPink hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
+                <i class="fas fa-rocket"></i> Daftar Reseller
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="py-6 text-center text-gray-400 text-sm relative z-10">
+        <p>&copy; 2026 Oppa Gemes. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
